@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libserver_base.a CMakeFiles/server_base.dir/src/asio_iocontext_pool.cpp.o CMakeFiles/server_base.dir/src/message.grpc.pb.cc.o CMakeFiles/server_base.dir/src/message.pb.cc.o CMakeFiles/server_base.dir/src/mysql_connection_pool.cpp.o CMakeFiles/server_base.dir/src/redis_connection_pool.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libserver_base.a
