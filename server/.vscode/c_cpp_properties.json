@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/boost@1.85/1.85.0_2/include",
+                "/opt/homebrew/Cellar/jsoncpp/1.9.6/include",
+                "/opt/homebrew/Cellar/grpc/1.68.2_1/include",
+                "/opt/homebrew/Cellar/abseil/20240722.0/include",
+                "/opt/homebrew/Cellar/protobuf/29.1/include",
+                "/opt/homebrew/Cellar/yaml-cpp/0.8.0/include",
+                "/opt/homebrew/Cellar/hiredis/1.2.0/include",
+                "/usr/local/mysql-connector-c++/include"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}

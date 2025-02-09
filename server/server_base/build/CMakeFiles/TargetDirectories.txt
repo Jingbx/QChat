@@ -1,0 +1,3 @@
+/Users/jingbx/Qt.6.0.0/workspace/Qchat/server/server_base/build/CMakeFiles/server_base.dir
+/Users/jingbx/Qt.6.0.0/workspace/Qchat/server/server_base/build/CMakeFiles/edit_cache.dir
+/Users/jingbx/Qt.6.0.0/workspace/Qchat/server/server_base/build/CMakeFiles/rebuild_cache.dir

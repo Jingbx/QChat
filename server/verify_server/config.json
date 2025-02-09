@@ -1,0 +1,21 @@
+{
+    "email": {
+        "user": "18804328557@163.com",
+        "pass": "QZbXW9E6RJYMK93Q"
+    },
+    "mysql": {
+        "host": "192.168.3.37",
+        "port": 3316,
+        "passwd": 2882
+    },
+    "redis": {
+        "host": "192.168.3.37",
+        "port": 6380,
+        "passwd": 2882
+    },
+    "vericode": {
+        "wait:": 15,
+        "wait_lable": 1,
+        "expired": 180
+    }
+}

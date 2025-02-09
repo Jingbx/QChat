@@ -1,0 +1,2 @@
+1. 两个chatServer中的mysql dao中从mysql中查找icon nick等信息没有完善，暂时注释了，因为表中没有这些key
+✅ 已经在表中添加这些数据属性 为NULL并不会查找错误

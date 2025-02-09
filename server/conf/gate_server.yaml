@@ -1,0 +1,29 @@
+GateServer:
+    port: 8080
+
+VerifyServer:
+    host: 127.0.0.1
+    port: 50051
+
+StatusServer:
+    host: 127.0.0.1
+    port: 50052
+
+Grpc:
+  pool_size: 5
+
+Mysql:
+  pool_size: 5
+  # host: 10.193.2.225
+  host: 192.168.3.37
+  port: 3308
+  user: root
+  pass: 2882
+  schema: jbx
+
+Redis:
+  pool_size: 5
+  # host: 10.193.2.225
+  host: 192.168.3.37
+  port: 6380
+  pass: 2882

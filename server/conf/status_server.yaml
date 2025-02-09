@@ -1,0 +1,35 @@
+StatusServer:
+  host: 0.0.0.0
+  port: 50052
+
+ChatServers:
+  names: chatserver1,chatserver2 # getline(',')
+
+chatserver1:
+  name: chatserver1
+  host: 127.0.0.1
+  port: 8090
+
+chatserver2:
+  name: chatserver2
+  host: 127.0.0.1
+  port: 8091
+
+Grpc:
+  pool_size: 5
+
+Mysql:
+  pool_size: 5
+  # host: 10.193.2.225
+  host: 192.168.3.37
+  port: 3308
+  user: root
+  pass: 2882
+  schema: jbx
+
+Redis:
+  pool_size: 5
+  # host: 10.193.2.225
+  host: 192.168.3.37
+  port: 6380
+  pass: 2882

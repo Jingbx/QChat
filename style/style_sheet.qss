@@ -1,0 +1,732 @@
+/* 核心字体配置 */
+* {
+    font-family: "Monaco", "Courier New";
+    font-size: 12pt;
+    color: white;
+}
+
+/* 对话框和窗口 */
+QDialog, #LoginDialog, #RegisterDialog, #ResetDialog {
+    background-color: rgb(36, 37, 42); /* 深灰色背景 */
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 12pt;
+}
+
+/* 标签 */
+QLabel {
+    color: #ccc; /* 灰白色 */
+    font-weight: bold;
+}
+
+/* 错误提示 */
+#err_tip {
+    color: white;
+    font-weight: bold;
+    font-size: 10pt; /* 设置字体大小为 11pt */
+    font-family: "Monaco", "Courier New";
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#err_tip[state='normal'] {
+    color: rgb(38, 220, 38);
+    font-weight: bold;
+    font-size: 10pt; /* 设置字体大小为 11pt */
+    font-family: "Monaco", "Courier New";
+    border: 1px solid rgba(38, 220, 38, 0.6);
+    background-color: rgba(38, 220, 38, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#err_tip[state='err'] {
+    color: rgb(220, 38, 38);
+    font-weight: bold;
+    font-size: 10pt; /* 设置字体大小为 11pt */
+    font-family: "Monaco", "Courier New";
+    border: 1px solid rgba(220, 38, 38, 0.6);
+    background-color: rgba(220, 38, 38, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#getvericode_btn,
+#fp_verify_btn {
+    font-size: 11pt; /* 设置字体大小为 11pt */
+}
+
+
+/* forget label */
+#forget_pwd_label[state='normal'],#forget_pwd_label[state='selected']{
+color:white;
+}
+
+#forget_pwd_label[state='hover'], #forget_pwd_label[state='selected_hover']{
+color: rgb(45, 90, 180);
+}
+
+#forget_pwd_label[state='press'], #forget_pwd_label[state='selected_press']{
+color: rgb(30, 65, 120);
+}
+
+/* 输入框 */
+#chat_data_list {
+    background-color: rgb(50,50,50); /* 深色背景 */
+    border: none; /* 隐藏边框 */
+}
+#chatEdit {
+    background-color: rgb(36, 37, 42); /* 深色背景 */
+    font-size: 15pt;
+    border: none; /* 隐藏边框 */
+}
+#send_wid{
+    background: rgb(36, 37, 42);
+    border: none; /* 隐藏边框 */
+}
+QLineEdit {
+    background-color: rgb(50, 50, 50); /* 深色背景 */
+    border: 1px solid rgb(80, 80, 80); /* 边框灰色 */
+    border-radius: 5px;
+    padding: 6px;
+    color: white;
+    font-size: 12pt;
+}
+
+QLineEdit:focus {
+    border: 1px solid rgb(85, 140, 255); /* 聚焦时的亮蓝色边框 */
+    outline: none;
+}
+
+#add_btn[state='normal'] {
+    border-image: url(:/resources/add_friend_normal.png);
+}
+
+#add_btn[state='hover'] {
+    border-image: url(:/resources/add_friend_hover.png);
+}
+
+#add_btn[state='press'] {
+    border-image: url(:/resources/add_friend_hover.png);
+}
+
+#title_lb {
+    background-color: rgb(50, 50, 50); /* 深灰色背景 */
+    font-family: "Monaco", "Courier New";
+    font-size: 18pt;
+    color: white;
+    border-top: 1px solid rgb(70, 70, 70); /* 下方灰色细边框 */
+    border-bottom: 1px solid rgb(70, 70, 70); /* 下方灰色细边框 */
+    border-left: 1px solid rgb(70, 70, 70); /* 下方灰色细边框 */
+    border-right: none; /* 去掉右边框（默认） */
+}
+
+/* 按钮 */
+QPushButton {
+    background-color: rgb(56, 112, 221); /* 蓝色按钮 */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+QPushButton:hover {
+    background-color: rgb(45, 90, 180); /* 悬停时变深 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(30, 65, 120); /* 点击时的更深色 */
+}
+
+
+/* 密码可视化按钮 */
+#pwd_visible[state='unvisible'] {
+    border-image: url(:/resources/unvisible.png);
+}
+
+#pwd_visible[state='unvisible_hover'] {
+    border-image: url(:/resources/unvisible_hover.png);
+}
+
+#pwd_visible[state='visible'] {
+    border-image: url(:/resources/visible.png);
+}
+
+#pwd_visible[state='visible_hover'] {
+    border-image: url(:/resources/visible_hover.png);
+}
+
+#confirm_visible[state='unvisible'] {
+    border-image: url(:/resources/unvisible.png);
+}
+
+#confirm_visible[state='unvisible_hover'] {
+    border-image: url(:/resources/unvisible_hover.png);
+}
+
+#confirm_visible[state='visible'] {
+    border-image: url(:/resources/visible.png);
+}
+
+#confirm_visible[state='visible_hover'] {
+    border-image: url(:/resources/visible_hover.png);
+}
+
+/* 滚动条轨道 */
+QScrollBar:vertical {
+    background: transparent; /* 将轨道背景设置为透明 */
+    width: 8px; /* 滚动条宽度，根据需要调整 */
+    margin: 0px; /* 移除滚动条与滑块之间的间距 */
+}
+
+/* 滑块样式 - 灰白渐变 */
+QScrollBar::handle:vertical {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(80, 80, 80, 0.9),  /* 深灰 */
+        stop:1 rgba(210, 210, 210, 0.9) /* 浅灰白 */
+    );
+    min-height: 1 0px; /* 提升滑块的最低高度 */
+    border-radius: 4px; /* 滑块边缘圆角，调整以形成椭圆形状 */
+    border: 1px solid rgba(200, 200, 200, 0.5); /* 柔和的边框效果 */
+}
+
+/* 鼠标悬停滑块样式 */
+QScrollBar::handle:vertical:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(150, 150, 150, 1),  /* 中灰 */
+        stop:1 rgba(230, 230, 230, 1) /* 更亮的灰白 */
+    );
+    border: 1px solid rgba(255, 255, 255, 0.6); /* 较强的白色边框 */
+}
+
+/* 移除上下箭头按钮 */
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    border: none;
+    background: transparent;
+}
+
+/* 页面滚动区域 */
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none; /* 页面滚动背景透明 */
+}
+
+/* 背景和容器 */
+#side_bar {
+    background-color: rgb(40, 40, 45);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 搜索框 */
+#add_tip {
+    border-image: url(:/resources/addtip.png);
+}
+#right_tip {
+    border-image: url(:/resources/right_tip.png);
+}
+#message_tip {
+    font-family: "Monaco", "Courier New";
+    font-size: 14pt;
+    color: white;
+}
+
+/* 列表框 */
+#chat_user_wid {
+    background-color: rgb(54 ,54 ,54);
+}
+#chat_user_list {
+    background-color: rgb(79, 79, 79);
+    border-radius: 0.0001px;
+}
+
+#chat_user_list::item:selected {
+    background-color: rgb(56, 112, 221);
+}
+
+#chat_user_list::item:hover {
+    background-color: rgb(105 ,105 ,105);
+}
+
+/* 选中同时悬停的项保持选中样式 */
+#chat_user_list::item:hover:selected {
+    background-color: rgb(56, 112, 221); /* 选中+悬停时仍为蓝色 */
+}
+
+#chat_user_list::focus {
+    border: none;
+    outline: none;
+}
+
+
+/* 特殊项目和提示 */
+#message_tip, #fail_tip, #fail_tip2 {
+    font-family: "Monaco", "Courier New";
+    font-size: 14px;
+    color: #ccc;
+    background: #333;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* 高亮点 */
+#red_point {
+    border-image: url(:/resources/red_point.png);
+}
+
+/* 侧边栏按钮 */
+#side_chat_lb[state='normal']{
+    border-image: url(:/resources/chat_icon.png);
+}
+#side_chat_lb[state='hover']{
+    border-image: url(:/resources/chat_icon_press.png);
+}
+#side_chat_lb[state='pressed']{
+    border-image: url(:/resources/chat_icon_press.png);
+}
+#side_chat_lb[state='selected_normal']{
+    border-image: url(:/resources/chat_icon_press.png);
+}
+#side_chat_lb[state='selected_hover']{
+    border-image: url(:/resources/chat_icon_press.png);
+}
+#side_chat_lb[state='selected_pressed']{
+    border-image: url(:/resources/chat_icon_press.png);
+}
+#side_contact_lb[state='normal']{
+    border-image: url(:/resources/contact_list.png);
+}
+#side_contact_lb[state='hover']{
+    border-image: url(:/resources/contact_list_press.png);
+}
+#side_contact_lb[state='pressed']{
+    border-image: url(:/resources/contact_list_press.png);
+}
+#side_contact_lb[state='selected_normal']{
+    border-image: url(:/resources/contact_list_press.png);
+}
+#side_contact_lb[state='selected_hover']{
+    border-image: url(:/resources/contact_list_press.png);
+}
+#side_contact_lb[state='selected_pressed']{
+    border-image: url(:/resources/contact_list_press.png);
+}
+
+#chat_area{
+    border: none;
+}
+
+/* chatpage */
+#emo_lb[state='normal']{
+    border-image: url(:/resources/smile.png);
+}
+
+#emo_lb[state='hover']{
+    border-image: url(:/resources/smile_hover.png);
+}
+
+#emo_lb[state='press']{
+    border-image: url(:/resources/smile_press.png);
+}
+
+#file_lb[state='normal']{
+    border-image: url(:/resources/filedir.png);
+}
+
+#file_lb[state='hover']{
+    border-image: url(:/resources/filedir_hover.png);
+}
+
+#file_lb[state='press']{
+    border-image: url(:/resources/filedir_press.png);
+}
+
+/* 好友 */
+#FindSuccessDlg, #FindFailDlg {
+    background-color: #2f2f2f;       /* 黑灰色背景 */
+    color: #ffffff;                  /* 白色字体 */
+    border: 1.5px solid #1E90FF;       /* 蓝色边框 */
+    padding: 10px;                   /* 内边距，确保内容不贴边 */
+}
+
+
+#FindSuccessDlg QLabel, #FindFailDlg QLabel {
+    color: #ffffff;                  /* 标签字体颜色 */
+}
+
+#ApplyFriend {
+    border: 2px solid rgb(45, 90, 180); /* 边框颜色调整为暗色 */
+    font-size: 14px;
+    background: #2b2b2b; /* 背景改为暗色 */
+    color: #ffffff; /* 文本颜色改为白色 */
+}
+
+#scrollArea {
+    background: #2b2b2b; /* 背景改为暗色 */
+    border: 2px solid rgb(45, 90, 180); /* 边框颜色调整为暗色 */
+    border-bottom: none;
+    border: none;
+}
+
+#scrollcontent {
+    border: 2px solid rgb(45, 90, 180); /* 边框颜色调整为暗色 */
+    border-bottom: none;
+    background: #2b2b2b; /* 背景改为暗色 */
+}
+
+#scrollcontent #apply_lb {
+    font-family: "Monaco", monospace; /* 字体修改为Monaco */
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff; /* 字体颜色为白色 */
+}
+
+#apply_wid QLabel {
+    color: #c0c0c0; /* 字体颜色为浅灰色 */
+    font-size: 14px;
+    font-family: "Monaco", monospace; /* 使用Monaco字体 */
+    height: 25px;
+}
+
+#apply_wid #name_ed, #apply_wid #back_ed {
+    border: 1px solid #444444; /* 边框颜色更深 */
+    font-size: 14px;
+    font-family: "Monaco", monospace; /* 使用Monaco字体 */
+    color: #ffffff; /* 字体颜色为白色 */
+    background: #333333; /* 背景颜色为暗色 */
+}
+
+#apply_wid #lb_ed {
+    border: none;
+    font-size: 11px;
+    font-family: "Monaco", monospace; /* 使用Monaco字体 */
+    color: #ffffff; /* 字体颜色为白色 */
+    background: #333333; /* 背景颜色为暗色 */
+}
+
+#apply_wid #more_lb {
+    border-image: url(:/resources/arowdown.png);
+}
+
+#apply_wid #tipslb[state='normal'] {
+    padding: 2px;
+    background: #444444; /* 背景颜色调整为深灰色 */
+    color: #ffffff; /* 字体颜色为白色 */
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='hover'] {
+    padding: 2px;
+    background: #555555; /* 背景颜色调整为浅灰色 */
+    color: #ffffff; /* 字体颜色为白色 */
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='pressed'] {
+    padding: 2px;
+    background: #666666; /* 背景颜色调整为更浅灰色 */
+    color: #48bf56; /* 按钮被按下时颜色调整 */
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_normal'] {
+    padding: 2px;
+    background: #444444;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_hover'] {
+    padding: 2px;
+    background: #555555;
+    color: #48bf56;
+    border-radius: 10px;
+}
+
+#apply_wid #tipslb[state='selected_pressed'] {
+    padding: 2px;
+    background: #666666;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#input_tip_wid {
+    background: #333333; /* 背景颜色改为深色 */
+}
+
+#apply_wid #FriendLabel {
+    background: rgb(85, 140, 255); /* 背景颜色为绿色，配合暗黑风 */
+    color: #ffffff; /* 字体颜色改为白色 */
+    border-radius: 10px;
+}
+
+#apply_wid #tip_lb {
+    padding-left: 2px;
+    color: rgb(153, 153, 153); /* 浅灰色字体 */
+    font-size: 14px;
+    font-family: "Monaco", monospace; /* 使用Monaco字体 */
+}
+
+#gridWidget {
+    background: #222222; /* 更深的背景色 */
+}
+
+#close_lb[state='normal'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#close_lb[state='hover'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#close_lb[state='pressed'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#close_lb[state='select_normal'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#close_lb[state='select_hover'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#close_lb[state='select_pressed'] {
+    border-image: url(:/resources/tipclose.png);
+}
+
+#apply_sure_wid #sure_btn[state='normal'] {
+    background: #333333; /* 背景为深色 */
+    color: #48bf56; /* 按钮文字为绿色 */
+    font-size: 14px; /* 调整按钮字体大小 */
+    font-family: "Monaco"; /* 使用Monaco字体 */
+    border-radius: 20px;
+}
+
+#apply_sure_wid #sure_btn[state='hover'] {
+    background: #444444; /* 背景为更浅的暗色 */
+    color: #48bf56;
+    font-size: 14px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+#apply_sure_wid #sure_btn[state='press'] {
+    background: #555555; /* 按钮按下时背景颜色 */
+    color: #48bf56;
+    font-size: 14px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+#apply_sure_wid #cancel_btn[state='normal'] {
+    background: #333333;
+    color: #ffffff;
+    font-size: 14px; /* 调整按钮字体大小 */
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+#apply_sure_wid #cancel_btn[state='hover'] {
+    background: #444444;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+#apply_sure_wid #cancel_btn[state='press'] {
+    background: #555555;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+/* 添加好友 */
+#con_user_list {
+    background-color: #1E1E1E; /* 深色背景 */
+    border: none;
+}
+
+#con_user_list::item:selected {
+    background-color: #3B4252; /* 深色选中效果 */
+    color: #88C0D0; /* 高亮蓝色 */
+    border: none;
+    outline: none;
+    font-family: "Monaco"; /* 设置字体 */
+}
+
+#con_user_list::item:hover {
+    background-color: #2E3440; /* 浅灰悬浮效果 */
+    color: #8FBCBB; /* 浅蓝色 */
+    border: none;
+    outline: none;
+    font-family: "Monaco"; /* 设置字体 */
+}
+
+#con_user_list::focus {
+    border: none;
+    outline: none;
+}
+
+#GroupTipItem {
+    background-color: #2E3440; /* 深灰背景 */
+    border: none;
+}
+
+#GroupTipItem QLabel {
+    color: #ECEFF4; /* 高亮白色文字 */
+    font-size: 12px; /* 设置字体大小 */
+    font-family: "Monaco"; /* 设置字体 */
+    border: none;
+}
+
+#new_friend_item {
+    border-bottom: 1px solid #434C5E; /* 深蓝灰边框 */
+}
+
+#LineItem {
+    background-color: #2E3440; /* 深灰背景 */
+    border: none;
+}
+
+#friend_apply_lb {
+    font-family: "Monaco"; /* 设置字体 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold;
+    color: #ECEFF4; /* 白色文字 */
+}
+
+#friend_apply_wid {
+    background-color: #2E3440; /* 深灰背景 */
+    border-bottom: 1px solid #434C5E;
+}
+
+#apply_friend_list {
+    background-color: #2E3440; /* 深灰背景 */
+    border-left: 1px solid #434C5E;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+ApplyFriendItem {
+    background-color: #2E3440; /* 深灰背景 */
+    border-bottom: 2px solid #3B4252;
+}
+
+ApplyFriendItem #user_chat_lb {
+    color: #8FBCBB; /* 浅蓝色文字 */
+    font-size: 14px; /* 设置字体大小 */
+    font-family: "Monaco"; /* 设置字体 */
+}
+
+ApplyFriendItem #addBtn[state='normal'] {
+    background-color: #3B4252; /* 深灰背景 */
+    color: #88C0D0; /* 高亮蓝色 */
+    font-size: 16px; /* 设置字体大小 */
+    font-family: "Monaco"; /* 设置字体 */
+    border-radius: 20px; /* 圆角效果 */
+}
+
+ApplyFriendItem #addBtn[state='hover'] {
+    background-color: #4C566A; /* 浅灰背景 */
+    color: #88C0D0; /* 高亮蓝色 */
+    font-size: 16px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+ApplyFriendItem #addBtn[state='press'] {
+    background-color: #5E81AC; /* 高亮深蓝背景 */
+    color: #ECEFF4; /* 白色文字 */
+    font-size: 16px;
+    font-family: "Monaco";
+    border-radius: 20px;
+}
+
+#AuthenFriend {
+    border: 2px solid #3B4252;
+    font-size: 14px;
+    font-family: "Monaco";
+    background: #2E3440;
+}
+
+#red_point {
+    border-image: url(:/resources/red_point.png);
+}
+
+#friend_info_page {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #2E3440, stop:1 #3B4252); /* 深色渐变背景 */
+    border: 1px solid #4C566A; /* 边框颜色 */
+    border-radius: 8px; /* 圆角 */
+}
+
+#friend_info_page #nick_tip,
+#friend_info_page #nick_lb,
+#friend_info_page #bak_lb,
+#friend_info_page #bak_tip {
+    color: #ECEFF4; /* 高亮文字颜色 */
+    font-size: 14px; /* 设置字体大小 */
+    font-family: "Monaco"; /* 设置字体 */
+}
+
+#friend_info_page:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #3B4252, stop:1 #434C5E); /* 鼠标悬浮效果，稍亮渐变 */
+    border: 1px solid #5E81AC; /* 高亮边框颜色 */
+}
+
+#msg_chat[state='normal'] {
+    background-color: #4C566A; /* 浅灰悬浮效果 */
+    border-image: url(:/resources/msg_chat_normal.png); /* 调整路径 */
+}
+
+#msg_chat[state='hover'] {
+    border-image: url(:/resources/msg_chat_hover.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
+
+#msg_chat[state='press'] {
+    border-image: url(:/resources/msg_chat_press.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
+
+#video_chat[state='normal'] {
+    background-color: #4C566A; /* 浅灰悬浮效果 */
+    border-image: url(:/resources/video_chat_normal.png); /* 调整路径 */
+}
+
+#video_chat[state='hover'] {
+    border-image: url(:/resources/video_chat_hover.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
+
+#video_chat[state='press'] {
+    border-image: url(:/resources/video_chat_press.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
+
+#voice_chat[state='normal'] {
+    background-color: #4C566A; /* 浅灰悬浮效果 */
+    border-image: url(:/resources/voice_chat_normal.png); /* 调整路径 */
+}
+
+#voice_chat[state='hover'] {
+    border-image: url(:/resources/voice_chat_hover.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
+
+#voice_chat[state='press'] {
+    border-image: url(:/resources/voice_chat_press.png); /* 调整路径 */
+    background-color: #5E81AC; /* 高亮蓝色按压效果 */
+}
