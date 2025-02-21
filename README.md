@@ -28,8 +28,4 @@
   - conf目录下完善服务配置，项目通过YAML-CPP实现配置管理
   - 运行所有服务
   - Qt启动客户端
-## 声明
 
-项目参考于https://gitee.com/secondtonone1/llfcchat❤️，对音视频播放功能进行添加，采用YAML-CPP作为配置库，并且重构前后端代码结构。
-
-**如有问题请联系18804328557@qq.com**
